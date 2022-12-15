@@ -4,6 +4,9 @@
 
 Object tracking implemented with YOLOv4, DeepSort, and TensorFlow. YOLOv4 is a state of the art algorithm that uses deep convolutional neural networks to perform object detections. We can take the output of YOLOv4 feed these object detections into Deep SORT (Simple Online and Realtime Tracking with a Deep Association Metric) in order to create a highly accurate object tracker.
 
+## Demo of Object Tracking and counting on Ducks
+<p align="center"><img src="outputs/duck2.mp4"\></p>
+
 ## Demo of Object Tracker on Persons
 <p align="center"><img src="data/helpers/demo.gif"\></p>
 
@@ -41,11 +44,11 @@ https://developer.nvidia.com/cuda-10.1-download-archive-update2
 ## Downloading Official YOLOv4 Pre-trained Weights
 Our object tracker uses YOLOv4 to make the object detections, which deep sort then uses to track. There exists an official pre-trained YOLOv4 object detector model that is able to detect 80 classes. For easy demo purposes we will use the pre-trained weights for our tracker.
 
-###Download pre-trained yolov4.weights file: https://drive.google.com/open?id=1cewMfusmPjYWbrnuJRuKhPMwRe_b9PaT
+### Download pre-trained yolov4.weights file: https://drive.google.com/open?id=1cewMfusmPjYWbrnuJRuKhPMwRe_b9PaT
 
-###Download the duck model I trained: https://drive.google.com/file/d/1F3pUC2uSfpolcvljaTxr--wzXPnKl1Hn/view?usp=share_link
+### Download the duck model I trained: https://drive.google.com/file/d/1F3pUC2uSfpolcvljaTxr--wzXPnKl1Hn/view?usp=share_link
 
-###Copy and paste yolov4.weights from your downloads folder into the 'data' folder of this repository.
+### Copy and paste yolov4.weights from your downloads folder into the 'data' folder of this repository.
 
 
 If you want to use yolov4-tiny.weights, a smaller model that is faster at running detections but less accurate, download file here: https://github.com/AlexeyAB/darknet/releases/download/darknet_yolo_v4_pre/yolov4-tiny.weights
