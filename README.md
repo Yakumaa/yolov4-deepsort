@@ -40,9 +40,13 @@ https://developer.nvidia.com/cuda-10.1-download-archive-update2
 
 ## Downloading Official YOLOv4 Pre-trained Weights
 Our object tracker uses YOLOv4 to make the object detections, which deep sort then uses to track. There exists an official pre-trained YOLOv4 object detector model that is able to detect 80 classes. For easy demo purposes we will use the pre-trained weights for our tracker.
-Download pre-trained yolov4.weights file: https://drive.google.com/open?id=1cewMfusmPjYWbrnuJRuKhPMwRe_b9PaT
 
-Copy and paste yolov4.weights from your downloads folder into the 'data' folder of this repository.
+###Download pre-trained yolov4.weights file: https://drive.google.com/open?id=1cewMfusmPjYWbrnuJRuKhPMwRe_b9PaT
+
+###Download the duck model I trained: https://drive.google.com/file/d/1F3pUC2uSfpolcvljaTxr--wzXPnKl1Hn/view?usp=share_link
+
+###Copy and paste yolov4.weights from your downloads folder into the 'data' folder of this repository.
+
 
 If you want to use yolov4-tiny.weights, a smaller model that is faster at running detections but less accurate, download file here: https://github.com/AlexeyAB/darknet/releases/download/darknet_yolo_v4_pre/yolov4-tiny.weights
 
@@ -55,7 +59,7 @@ python save_model.py --model yolov4
 # Run yolov4 deep sort object tracker on video
 python object_tracker.py --video ./data/video/test.mp4 --output ./outputs/demo.avi --model yolov4
 
-# Run yolov4 on video
+# Run yolov4 on video for duck counting
 python object_tracker.py --weights ./checkpoints/yolov4-obj_2000-416 --size 416 --model yolov4 --video ./data/video/vid.mp4
 
 # Run yolov4 deep sort object tracker on webcam (set video flag to 0)
@@ -140,7 +144,11 @@ save_model.py:
 ```
 
 ### References  
+  
+   Cloned from theAIGuysCode
+   * [yolov4-DeepSORT Repository](https://github.com/theAIGuysCode/yolov4-deepsort)
 
    Huge shoutout goes to hunglc007 and nwojke for creating the backbones of this repository:
+
   * [tensorflow-yolov4-tflite](https://github.com/hunglc007/tensorflow-yolov4-tflite)
   * [Deep SORT Repository](https://github.com/nwojke/deep_sort)
