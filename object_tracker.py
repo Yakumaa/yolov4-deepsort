@@ -270,7 +270,7 @@ def main(_argv):
 
         total_count = len(set(counter))
         # cv2.putText(frame, "Current Vehicle Count: " + str(current_count), (0, 80), 0, 1, (0, 0, 255), 2)
-        cv2.putText(frame, str(total_count), (0,130), 0, 1, (0,0,255), 2)
+        cv2.putText(frame, str(total_count), (0,130), 0, 1, (0,255,0), 2)
 
         # calculate frames per second of running detections
         fps = 1.0 / (time.time() - start_time)
